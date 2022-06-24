@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% load static %} {% block content %}
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-12">
+				<button class="btn btn-info btn-sm">Continue shopping</button>
+			</div>
+			<div class="col-md-12 my-3 d-flex justify-content-between mb-3">
+				<p>Items: 3</p>
+				<p>Total: $43</p>
+				<button class="btn btn-primary btn-sm">Checkout</button>
+			</div>
+			<table class="table table-bordered col-md-12">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Item</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+                
+				<tbody>
+                    {% for item in items %}
+					<tr>
+						<td><img style="height: 200px;width:100%;" src="{{item.product.image.url}}" alt=""></td>
+						<td>{{item.product.name}}</td>
+						<td>${{item.product.price|floatformat:2}}</td>
+						<td>{{item.quantity}}</td>
+						<td>$40</td>
+					</tr>
+					{% endfor %}
+                    <tr>
+						<td><img style="height: 200px;width:100%;" src="{% static 'images/bike.jpg' %}" alt=""></td>
+						<td>bike</td>
+						<td>$20</td>
+						<td>10</td>
+						<td>$40</td>
+					</tr>
+				</tbody>
+                
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock%}
