@@ -109,4 +109,7 @@ section#shiping {
 .product-img img{
 	cursor: pointer;
 }
-
+.fa-shopping-cart{
+    font-size: 1.7rem;
+    margin-top: .3rem;
+}
