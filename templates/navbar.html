@@ -34,12 +34,12 @@
 		</form>
 		<ul class="navbar-nav ml-auto mr-5">
 			{% if request.user.is_authenticated %}
-			<li class="nav-item mr-2">
-				<i class="fas fa-shopping-cart" ></i>
+			<a href="{% url 'cart'%}" class="nav-item mr-2">
+				<i class="fas fa-shopping-cart text-dark" ></i>
 				<span  
 				class="badge badge-warning badge-pill">12</span>
 
-			</li>
+			</a>
 			<li class="nav-item dropdown">
 				<a
 					class="nav-link dropdown-toggle"
